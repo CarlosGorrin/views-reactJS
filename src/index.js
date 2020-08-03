@@ -8,6 +8,7 @@ const getButton = () =>{
 const App = () => {
     return (
         <div>
+        <h1>Header</h1>
         {/* https://github.com/StephenGrider/redux-code */}
             <button style={{backgroundColor:'blue', color:'white'}}>{getButton()}</button>
         </div>
