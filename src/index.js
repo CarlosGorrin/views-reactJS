@@ -1,17 +1,23 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { createBrowserHistory } from "history";
+import { Router, Route, Switch } from "react-router-dom";
 
-const getButton = () =>{
-    return 'Click me!';
-}
+import Landing from './components/Landing';
+
+const history = createBrowserHistory();
 
 const App = () => {
     return (
-        <div>
-        <h1>Header</h1>
-        {/* https://github.com/StephenGrider/redux-code */}
-            <button style={{backgroundColor:'blue', color:'white'}}>{getButton()}</button>
-        </div>
+        <Router history={history}>
+            <Switch>
+            <Route path="/stack" component={Landing} />
+            <Route path="/about" component={Landing} />
+            <Route path="/work" component={Landing} />
+            <Route path="/focus" component={Landing} />
+            <Route path="/" component={Landing} />
+            </Switch>
+        </Router>
     )
 };
 
